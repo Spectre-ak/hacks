@@ -1,3 +1,7 @@
+//below approach will remove ads from some websites only where the element containing the ads class name contains ads or ad.
+
+//but this may remove some important contents such as the elements which contains downloads or anything which as ad or ads in their class name.
+
 var all = document.getElementsByTagName("*");
 
 setInterval(function missionRemoveAds(argument) {
@@ -11,3 +15,7 @@ setInterval(function missionRemoveAds(argument) {
 	}
 }
 },4000);
+
+//setInterval will keep removing ads in every 4 seconds
+
+//the solution can be enhanced more by providing more specific searching keywords for ads containers or elements. 
