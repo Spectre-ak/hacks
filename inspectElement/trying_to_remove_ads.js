@@ -4,7 +4,7 @@
 
 
 //how to use:
-//just paste the below code on inspect element
+//just paste the below code on console in inspect element
 var all = document.getElementsByTagName("*");
 
 setInterval(function missionRemoveAds(argument) {
