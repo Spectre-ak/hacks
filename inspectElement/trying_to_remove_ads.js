@@ -2,6 +2,9 @@
 
 //but this may remove some important contents such as the elements which contains downloads or anything which as ad or ads in their class name.
 
+
+//how to use:
+//just paste the below code on inspect element
 var all = document.getElementsByTagName("*");
 
 setInterval(function missionRemoveAds(argument) {
