@@ -1,4 +1,5 @@
 //dark mode for wikipedia 
+//how to use: paste the below code on the console in inspect element
 
 document.getElementById("content").style.backgroundColor="black";
 document.getElementById("content").style.color="white";
