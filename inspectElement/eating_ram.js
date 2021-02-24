@@ -1,4 +1,4 @@
-//run a infinite loop in the inspect element of a website
+//run a infinite loop in the inspect element of the browser on a website
 //this will make the browser tab unresponsive and will block the site from loading further
 
 white(true){
