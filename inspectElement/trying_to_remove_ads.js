@@ -22,3 +22,21 @@ setInterval(function missionRemoveAds(argument) {
 //setInterval will keep removing ads in every 4 seconds
 
 //the solution can be enhanced more by providing more specific searching keywords for ads containers or elements. 
+
+
+
+//below code might work on sites which shows ads inside <img> tag
+//but this will remove all imnages from the site
+var imgs=document.getElementsByTagName("img");
+setInterval(function missionRemoveAds(argument) {
+	for (var i=0, max=imgs.length; i < max; i++) { 
+		try{
+			var ele=imgs[i];
+			ele.setAttribute('src',null);
+		}
+		catch(err){
+			continue;
+		}
+		
+}
+},1000);
