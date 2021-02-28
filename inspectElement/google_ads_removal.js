@@ -3,6 +3,9 @@
 
 //google renders ads on sites using iframes and below code removes those iframes in regular intervals using setInterval
 
+//how to use:
+//just paste the below code on console in inspect element
+
 setInterval(function missionRemoveAds(argument) {
 	var googleAdsIFrame=document.getElementsByTagName("iframe");
 	console.log(googleAdsIFrame);
