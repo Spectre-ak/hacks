@@ -6,3 +6,4 @@ this repository contains some tips and tricks to manipulate or alter tech stacks
 ##### 3. removing ads from websites (the key concept is to remove dom elements with class names containing advertisement keywords and can work more better for sites with advertisement elements class names known) [->](https://github.com/Spectre-ak/hacks/blob/main/inspectElement/trying_to_remove_ads.js)
 ##### 4. dark mode for wikipedia pages [->](https://github.com/Spectre-ak/hacks/blob/main/inspectElement/wikiDark.js)
 ##### 5. Removing google iframe ads from sites [->](https://github.com/Spectre-ak/hacks/blob/main/inspectElement/google_ads_removal.js)
+##### 6. Docker docs page liker see [dockerPageAutoLiker.java](https://github.com/Spectre-ak/hacks/blob/main/dockerPageAutoLiker.java) and make sure you have selenium web driver is present in your project along with chromedriver.exe (google how to setup) then run the code.
