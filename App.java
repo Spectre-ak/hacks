@@ -44,14 +44,9 @@ public class App {
 					System.out.println(element.attr("href"));
 					String hrefLINK = element.attr("href");
 					
-					if (hrefLINK.length() > 4 && hrefLINK.substring(0, 4).equals("http")) {
-						//if(hrefLINK.contains(domain))
-							
-					} else {
-						hrefLINK = baseURL + hrefLINK;
-						
-					}
-					
+					if ( !(hrefLINK.length() > 4 && hrefLINK.substring(0, 4).equals("http")) ) {
+						hrefLINK = baseURL + hrefLINK;	
+					} 					
 					if(getCleanedURL(hrefLINK).equals(domain))
 						priorityQueue.add(hrefLINK);
 				}
