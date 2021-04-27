@@ -37,7 +37,7 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
 
-    <h1>Googel Docs</h1>
+   <h1>Data get syncs on a google DOC every second</h1><br><br>
 
     <form name="submit-to-google-sheet">
       <input name="email" type="email" placeholder="Email" value="alasj@asd">
@@ -53,15 +53,13 @@
 
         const scriptURL = "your--app---script---url";
         
-
         CKEDITOR.replace( 'articleContent' );
-        var intervalId=setInterval(function(){
-          try {
-            console.log(window.innerHeight)
-            document.getElementById("cke_1_contents").style.height=window.innerHeight+"px";
-            var form=new FormData();
+        CKEDITOR.on('instanceReady',function(){
+          document.getElementById("cke_1_contents").style.height=window.innerHeight+"px";
+          CKEDITOR.instances.articleContent.setData("<p><span style='font-family:Times New Roman,Times,serif'><span style='font-size:72px'>WAIT....</span></span></p>");
+          var form=new FormData();
             form.append("data","get data");
-
+            console.log(CKEDITOR);
             $.ajax({
               url: scriptURL,
               type: 'post',
@@ -71,35 +69,26 @@
               success: function(response){
                 console.log(response);
                 CKEDITOR.instances.articleContent.setData(response["row"]);
+                setInterval(function(){
+                  var editorContent=CKEDITOR.instances.articleContent.getData();
+                  var form=new FormData();
+                  form.append("data",editorContent);
+                  $.ajax({
+                        url: scriptURL,
+                        type: 'post',
+                        data: form, 
+                        contentType: false,
+                        processData: false,
+                        success: function(response){
+                          console.log(response);
+                        }
+
+                      });  
+                },5000);
               }
 
             });
-            clearInterval(intervalId);
-          } catch (error) {
-            console.log(error);
-          }
-        },100);
-       
-        
-       setInterval(function(){
-        var editorContent=CKEDITOR.instances.articleContent.getData();
-        var form=new FormData();
-        form.append("data",editorContent);
-        $.ajax({
-              url: scriptURL,
-              type: 'post',
-              data: form, 
-              contentType: false,
-              processData: false,
-              success: function(response){
-                console.log(response);
-              }
-
-            });  
-      },1000);
-
-        console.log(CKEDITOR.instances);
-        console.log(CKEDITOR.instances.articleContent.getData());
+        });
 
 
       </script>
