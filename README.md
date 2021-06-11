@@ -10,3 +10,4 @@ this repository contains some tips and tricks to manipulate or alter tech stacks
 ##### 7. chrome extension for #5 hack which will get fired on each page load and remove all ifames[->](https://github.com/Spectre-ak/hacks/tree/main/chromeExtensions/if_r). `enable developer mode->load unpacked->select `[if_r](https://github.com/Spectre-ak/hacks/tree/main/chromeExtensions)`directory`
 ##### 8. simple web scrapper which takes a base url and extracts text from each href link present on the page.[->](https://github.com/Spectre-ak/hacks/blob/main/App.java)
 ##### 9. complete synced doc editor which saves data on a google doc in real-time using app script api and loads it on reload [->](https://github.com/Spectre-ak/hacks/blob/main/syncedDOC/main.js).
+##### 10. want to skip youtube or youtube music ads automatically, use [ad_skip](https://github.com/Spectre-ak/hacks/tree/main/chromeExtensions/ad_skip) chrome extensiom or paste the content script directly on the console
