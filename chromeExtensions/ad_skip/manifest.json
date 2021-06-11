@@ -1,0 +1,12 @@
+{
+	"manifest_version":2,
+	"name":"ad skip",
+	"version":"0.1",
+	"content_scripts":[
+
+		{
+			"matches": [ "*://*.youtube.com/", "*://*.music.youtube.com/"],
+			"js":["content.js"]
+		}
+	]
+} 
